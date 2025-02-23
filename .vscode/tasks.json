@@ -1,0 +1,56 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+            "label": "clang",
+            "command": "clang",
+            "args": [
+                "-target", "x86_64-pc-windows-msvc",
+                "-o", "bin\\${workspaceFolderBasename}.exe",
+
+                "-std=c++23",
+                "-static",
+                "-llib\\*",
+
+                "-Iinclude",
+                "src\\*.cpp",
+            ],
+
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		},
+		{
+			"type": "process",
+			"label": "run",
+			"command": "${workspaceFolderBasename}.exe",
+			"options": {
+				"cwd": "${workspaceFolder}\\bin"
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			// "dependsOn": "clang",
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": true,
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": true
+			}
+		}
+	]
+}
