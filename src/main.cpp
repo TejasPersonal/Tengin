@@ -95,6 +95,9 @@ inline void code() {
                             str.pop_back();
                             text.setText(str + cursor);
                         }
+                    } else if (event.key.key == 13) {
+                        str += '\n';
+                        text.setText(str + cursor);
                     }
                 )
                 // CASE (SDL_EVENT_KEY_UP,
