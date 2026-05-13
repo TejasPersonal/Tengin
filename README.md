@@ -32,7 +32,7 @@ cd Tengin
   ```
 
 - Windows (MSYS2):
-  - CLANG*:
+  - CLANG* (Native):
     ```sh
     pacman -S pactoys --noconfirm
     pacboy -S clang sdl3 sdl3-image sdl3-ttf --noconfirm
