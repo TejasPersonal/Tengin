@@ -2,7 +2,13 @@
 Personal practice project which includes example usage of the beautifully written modern RAII SDL abstraction (src/sdl.hpp).
 Includes SDL, SDL_image, SDL_ttf.
 
-# Clone
+## Supported build environments
+
+- MacOS
+- Windows (MSYS2)
+- Linux
+
+## Clone
 
 ```sh
 git clone https://github.com/TejasPersonal/Tengin.git
@@ -11,23 +17,57 @@ cd Tengin
 
 ## Dependencies
 
+- C/C++ toolchain
 - SDL (version 3.x.x)
 - SDL_image (version 3.x.x)
 - SDL_ttf (version 3.x.x)
 
-## Unix Compilation
+### Dependency installation examples:
+
+- Arch Linux:
+  ```sh
+  sudo pacman -S clang sdl3 sdl3-image sdl3-ttf --noconfirm
+  ```
+
+- Windows (MSYS2):
+  - CLANG*:
+    ```sh
+    pacman -S pactoys --noconfirm
+    pacboy -S clang sdl3 sdl3-image sdl3-ttf --noconfirm
+    ```
+  - MSYS:
+    ```sh
+    pacman -S clang sdl3 sdl3-image sdl3-ttf --noconfirm
+    ```
+
+- MacOS:
+  Install Homebrew if not installed
+  ```sh
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+
+  ```sh
+  xcode-select --install
+  brew install sdl3 sdl3_image sdl3_ttf
+  brew install pkgconf # for static linking
+  ```
+
+## Unix Compilation using clang
 
 - Dynamic Linking
   ```sh
   clang++ -o build/totpad src/main.cpp -lSDL3 -lSDL3_image -lSDL3_ttf
-    ```
+  ```
+  Note: clang++ is interopable with g++
 
 - Static Linking
   ```sh
-  clang++ -o build/totpad src/main.cpp -static $(pkg-config --libs --static SDL3 SDL3-image SDL3-ttf)
-    ```
+  clang++ -o build/totpad src/main.cpp -static $(pkg-config --libs --static sdl3 sdl3-image sdl3-ttf)
+  ```
 
-### Run
+Note: clang++ can be used interchangeably with g++
+
+## Run
 
 ```sh
 cd build
