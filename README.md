@@ -28,6 +28,7 @@ cd Tengin
 - Arch Linux:
   ```sh
   sudo pacman -S clang sdl3 sdl3-image sdl3-ttf --noconfirm
+  sudo pacman -S pkgconf # for static linking
   ```
 
 - Windows (MSYS2):
@@ -35,10 +36,12 @@ cd Tengin
     ```sh
     pacman -S pactoys --noconfirm
     pacboy -S clang sdl3 sdl3-image sdl3-ttf --noconfirm
+    pacboy -S pkgconf # for static linking
     ```
   - MSYS:
     ```sh
     pacman -S clang sdl3 sdl3-image sdl3-ttf --noconfirm
+    pacman -S pkgconf # for static linking
     ```
 
 - MacOS:
@@ -60,7 +63,6 @@ cd Tengin
   ```sh
   clang++ -o build/totpad src/main.cpp -lSDL3 -lSDL3_image -lSDL3_ttf
   ```
-  Note: clang++ is interopable with g++
 
 - Static Linking
   ```sh
