@@ -19,6 +19,7 @@
 ### Run
 
 ```sh
+cd build
 ./totpad
 ```
 
