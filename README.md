@@ -7,6 +7,7 @@ Includes SDL, SDL_image, SDL_ttf.
 - MacOS
 - Windows (MSYS2)
 - Linux
+- FreeBSD
 
 ## Clone
 
@@ -65,7 +66,7 @@ cd Tengin
   clang++ -o build/totpad src/main.cpp -static $(pkg-config --libs --static sdl3 sdl3-image sdl3-ttf)
   ```
 
-Note: clang++ can be used interchangeably with g++
+Note: clang++ can be used interchangeably with g++ if available
 
 ## Run
 
