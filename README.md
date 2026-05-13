@@ -42,11 +42,12 @@ cd Tengin
     ```
 
 - MacOS:
+
   Install Homebrew if not installed
   ```sh
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
-
+  Then:
   ```sh
   xcode-select --install
   brew install sdl3 sdl3_image sdl3_ttf
