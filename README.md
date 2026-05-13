@@ -2,7 +2,7 @@
 Personal practice project which includes example usage of the beautifully written modern RAII SDL abstraction (src/sdl.hpp).
 Includes SDL, SDL_image, SDL_ttf.
 
-## Supported build environments
+## Supported OS:
 
 - MacOS
 - Windows (MSYS2)
