@@ -1,8 +1,21 @@
+# Tengin
+Personal practice project which is example usage of the beautifully written modern RAII SDL abstraction (src/sdl.hpp).
+Includes SDL, SDL_image, SDL_ttf.
+
+# Clone
+
+```sh
+git clone https://github.com/TejasPersonal/Tengin.git
+cd Tengin
+```
+
 ## Dependencies
 
 - SDL (version 3.x.x)
 - SDL_image (version 3.x.x)
 - SDL_ttf (version 3.x.x)
+
+## Clone
 
 ## Unix Compilation
 
